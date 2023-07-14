@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Robot</title>
+    </head>
+    <style>  
+  .head,
+  .lefthand,
+  .shoulder,
+  .righthand,
+  .leftleg,
+  .rightleg {
+    background-color: blue;  
+  }
+  
+  .head {
+    width: 200px;
+    margin: 0 auto;
+    height: 150px;
+    border-radius: 200px 200px 0 0;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  
+  .eyes{
+    position: relative;
+    top: 100px;
+  }
+  
+  .eyes1,
+  .eyes2 {
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    background-color: white;
+    display: inline-block;
+    position: absolute;
+  }
+  
+  .eyes1{
+    margin-left: 30px;
+  }
+  
+  .eyes2{
+    margin-left: 100px;
+  }
+  
+  .upper_body {
+    width: 300px;
+    height: 150px;
+    margin: 0 auto;
+    display: flex;
+  }
+  
+  .lefthand,
+  .righthand{
+    width: 40px;
+    height: 125px;
+    border-radius: 100px;
+    margin-top: 20px;
+  }
+  
+  .lefthand{
+    margin-right: 10px;
+  }
+  .righthand{
+    margin-left: 10px;
+  }
+  
+  .shoulder{
+    width: 200px;
+    height: 200px;
+    border-radius: 0 0 50px 50px;
+    transition: border-radius 1s;
+  }
+  
+  .lower_body {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  
+  .leftleg,
+  .rightleg {
+    width: 40px;
+    height: 120px;
+    border-radius: 0 0 100px 100px;
+    display: inline-block;
+  }
+  
+  .leftleg {
+    margin-left: 45px;
+  }
+  
+  .rightleg {
+    margin-left: 30px;
+    position: absolute;
+  }
+  
+  .robots:hover .head{
+    animation: movehead 2s infinite;
+  }
+  
+  .robots:hover .shoulder{
+    border-radius: 40%;
+    animation: moveshoulder 2s infinite;
+  }
+  
+  .robots:hover .lefthand{
+    animation: movelefthand 2s infinite;
+  }
+  
+  .robots:hover .righthand{
+    animation: moverighthand 2s infinite;
+  }
+  
+  .robots:hover .leftleg {
+    animation: moveleftleg 2s infinite;
+  }
+  
+  .robots:hover .rightleg {
+    animation: moverightleg 2s infinite;
+  }
+  
+  @keyframes movehead {
+    0% {
+      width: 200px;
+    }
+  
+    25% {
+      width: 300px;
+    }
+  
+    50% {
+      width: 200px;
+    }
+  
+    75% {
+      width: 300px;
+    }
+  
+    100% {
+      width: 200px;
+    }
+  }
+  
+  @keyframes movelefthand{
+    0% {
+      transform: rotate(0deg);
+      transform-origin: top center;
+    }
+  
+    25% {
+      transform: rotate(90deg);
+      transform-origin: top center;
+    }
+  
+    50% {
+      transform: rotate(0deg);
+      transform-origin: top center;
+    }
+  
+    75% {
+      transform: rotate(90deg);
+      transform-origin: top center;
+    }
+  
+    100% {
+      transform: rotate(0deg);
+      transform-origin: top center;
+    }
+  }
+  
+  @keyframes moverighthand{
+    0% {
+      transform: rotate(0deg);
+      transform-origin: top center;
+    }
+  
+    25% {
+      transform: rotate(-90deg);
+      transform-origin: top center;
+    }
+  
+    50% {
+      transform: rotate(0deg);
+      transform-origin: top center;
+    }
+  
+    75% {
+      transform: rotate(-90deg);
+      transform-origin: top center;
+    }
+  
+    100% {
+      transform: rotate(0deg);
+      transform-origin: top center;
+    }
+  }
+  
+  @keyframes moveleftleg {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    25% {
+      transform: rotate(20deg);
+    }
+  
+    50% {
+      transform: rotate(0deg);
+    }
+  
+    75% {
+      transform: rotate(20deg);
+    }
+  
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes moverightleg {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    25% {
+      transform: rotate(-20deg);
+    }
+  
+    50% {
+      transform: rotate(0deg);
+    }
+  
+    75% {
+      transform: rotate(-20deg);
+    }
+  
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes moveshoulder {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+    </style>
+    <body bgcolor="pink">
+        <div>
+            <marquee style="font-size: 100px;">Dancing_Robot</marquee>
+        <div class="robots">
+            <div class="android">
+                <div class="head">
+                    <div class="eyes">
+                        <div class="eyes1"></div>
+                        <div class="eyes2"></div>
+                    </div>
+                </div>
+                <div class="upper_body">
+                    <div class="lefthand"></div>
+                    <div class="shoulder"></div>
+                    <div class="righthand"></div>
+                </div>
+                <div class="lower_body">
+                    <div class="leftleg"></div>
+                    <div class="rightleg"></div>
+                </div>
+            </div>
+
+    </div>
+
+    </div>
+</div>
+    </body>
+</html>
